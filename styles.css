@@ -1,0 +1,59 @@
+/* รีเซ็ตสไตล์เบื้องต้น */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* กล่องฟอร์ม */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* สไตล์อินพุต */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ปุ่มบันทึก */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0; /* ซ่อนปุ่มตอนแรก */
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards 0.5s; /* เริ่มแสดงหลังโหลด 0.5 วินาที */
+}
+
+/* เอฟเฟกต์ hover */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* แอนิเมชัน fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
