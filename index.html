@@ -1,25 +1,166 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ฟอร์มกรอกข้อมูล</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Self-Care Concept</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: #fff;
+            color: #000;
+        }
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        .section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .section p {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #444;
+        }
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        .shape {
+            position: absolute;
+            background: #ddd;
+            opacity: 0.6;
+        }
+        .shape.circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .shape.square {
+            width: 120px;
+            height: 120px;
+            transform: rotate(20deg);
+        }
+        .content-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+        }
+        .column {
+            flex: 1;
+            padding: 20px;
+        }
+        .gray-bg {
+            background: #ddd;
+        }
+        .whaite-bg{
+            background:#fff;
+        }
+        .sticky-header {
+            position: sticky;
+            top: 100;
+
+        }
+        .container {
+            display: flex;
+
+  
+            height: 100vh;
+        }
+        .container2 {
+            display: flex;
+
+  
+            height: 200vh;
+        }
+        .hidden {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s 2s, opacity 2s linear;
+        }
+    </style>
 </head>
 <body>
-
-    <div class="container">
-        <h2>กรอกข้อมูล</h2>
-        <form>
-            <label for="name">ชื่อ:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">อีเมล:</label>
-            <input type="email" id="email" name="email" required>
-
-            <button type="submit" class="fade-in">บันทึก</button>
-        </form>
+    <div class="section">
+        <div class="floating-shapes">
+            <div class="shape circle" style="top: 70%; left: 5%;"></div>
+            <div class="shape square" style="top: 10%; left: 10%;"></div>
+            <div class="shape circle" style="top: 70%; right: 5%;"></div>
+            <div class="shape square" style="top: 10%; right: 10%;"></div>
+        </div>
+        <div>
+            <h1>Is your idea of self-care truly yours?</h1>
+            <p>Self-care is supposed to be personal, yet somehow, it’s become a billion-dollar industry.</p>
+        </div>
     </div>
+    
+    <!-- <div class=""></div> -->
+    
+    <div class="content-section sticky-header">
+        <div class="column gray-bg">
+            <br>
+            <h2>What are we experiencing?</h2>
+           
+        </div>
+        <div class="column whaite-bg">
+            <p>Are You Really Living Well, or Just Chasing Trends?</p>
+            <h2>Where is it coming from?</h2>
+           
+        </div>
+        <div class="column gray-bg">
+            <br>
+            <h2>How is it pressuring?</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="column gray-bg">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        </div>
+        <div class="column whaite-bg">เนื้อหา 2</div>
+        <div class="column gray-bg">เนื้อหา 3</div>
+    </div>
+
+    <div class="container2">
+
+        <div class="column gray-bg">เนื้อหา 3</div>
+    </div>
+
 
 </body>
 </html>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let stickyHeader = document.querySelector(".sticky-header");
+        let stopSection = document.querySelector(".container2"); // ระบุ section ที่ต้องหยุด sticky
+
+        window.addEventListener("scroll", function () {
+            let stopSectionTop = stopSection.getBoundingClientRect().top;
+            
+            if (stopSectionTop <= 0) {
+                stickyHeader.style.position = "relative"; // ปิด sticky
+                
+            } else {
+                stickyHeader.style.position = "sticky"; // เปิด sticky
+                stickyHeader.style.top = "0"; // ป้องกันการหายไป
+            }
+        });
+    });
+</script>
