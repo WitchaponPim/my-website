@@ -92,6 +92,15 @@
             opacity: 0;
             transition: visibility 0s 2s, opacity 2s linear;
         }
+         .diamond {
+            width: 200px;
+            height: 200px;
+            background: #d3d3d3; /* สีเทา */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(30deg); /* หมุน 30 องศา */
+        }
     </style>
 </head>
 <body>
@@ -100,7 +109,7 @@
             <div class="shape circle" style="top: 70%; left: 5%;"></div>
             <div class="shape square" style="top: 10%; left: 10%;"></div>
             <div class="shape circle" style="top: 70%; right: 5%;"></div>
-            <div class="shape square" style="top: 10%; right: 10%;"></div>
+            <div class="diamond" style="top: 10%; right: 10%;"></div>
         </div>
         <div>
             <h1>Is your idea of self-care truly yours?</h1>
